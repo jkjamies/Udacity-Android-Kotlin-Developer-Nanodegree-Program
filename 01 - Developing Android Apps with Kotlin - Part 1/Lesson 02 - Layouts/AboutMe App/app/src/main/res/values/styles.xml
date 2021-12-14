@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--you can go to design tab for an xml file and right click a view, click-->
+    <!--refactor extract style, check/uncheck what you want/don't want,-->
+    <!--name it appropriately, and it will generate a style like below, which-->
+    <!--will allow you to style the app (set default theme to styles for example)-->
+
+    <style name="NameStyle">
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+</resources>

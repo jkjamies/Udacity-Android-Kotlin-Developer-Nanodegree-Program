@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~ PROJECT LICENSE
+  ~
+  ~ This project was submitted by Jason Jamieson as part of the Android Kotlin Developer Nanodegree At Udacity.
+  ~
+  ~ As part of Udacity Honor code, your submissions must be of your own work.
+  ~ Submission of this project will cause you to break the Udacity Honor Code
+  ~ and possible suspension of your account.
+  ~
+  ~ I, Jason Jamieson, the author of the project, allow you to check this code as reference, but if
+  ~ used as submission, it's your responsibility if you are expelled.
+  ~
+  ~ Copyright (c) 2020 Jason Jamieson
+  ~
+  ~ Besides the above notice, the following license applies and this license notice
+  ~ must be included in all works derived from this project.
+  ~
+  ~ MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.screens.listings.ShoeViewModel" />
+    </data>
+
+    <!--    ConstraintLayout was the layout of choice here because of the added complexity of-->
+    <!--    adding two buttons left and right of one another. It was simpler to chain vertical-->
+    <!--    all views, as well as chain the buttons horizontally. This created an adaptable layout.-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.title.TitleFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <TextView
+            android:id="@+id/detailsShoeNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailsShoeNameTextInputEditText"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailsShoeNameTextInputEditText"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:inputType="text"
+            android:text="@={shoeViewModel.shoe.name}"
+            app:layout_constraintBottom_toTopOf="@id/detailsShoeCompanyNameTextInputEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/detailsShoeCompanyNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/company"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailsShoeCompanyNameTextInputEditText"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailsShoeCompanyNameTextInputEditText"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:inputType="text"
+            android:text="@={shoeViewModel.shoe.company}"
+            app:layout_constraintBottom_toTopOf="@+id/detailsShoeSizeTextInputEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/detailsShoeNameTextInputEditText" />
+
+        <TextView
+            android:id="@+id/detailsShoeSizeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailsShoeSizeTextInputEditText"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailsShoeSizeTextInputEditText"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:inputType="numberDecimal"
+            android:text="@{shoeViewModel.shoeSizeModel.shoeSize}"
+            app:layout_constraintBottom_toTopOf="@+id/detailsShoeDescriptionTextInputEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/detailsShoeCompanyNameTextInputEditText" />
+
+        <TextView
+            android:id="@+id/detailsShoeDescriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/description"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailsShoeDescriptionTextInputEditText"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/detailsShoeDescriptionTextInputEditText"
+            style="@style/TextInputEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_double"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_double"
+            android:inputType="textMultiLine"
+            android:text="@={shoeViewModel.shoe.description}"
+            app:layout_constraintBottom_toTopOf="@+id/detailsShoeSaveMaterialButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/detailsShoeSizeTextInputEditText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detailsShoeCancelMaterialButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:onClick="@{() -> shoeViewModel.addShoeComplete()}"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailsShoeSaveMaterialButton"
+            app:layout_constraintEnd_toStartOf="@+id/detailsShoeSaveMaterialButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detailsShoeSaveMaterialButton"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin"
+            android:layout_marginBottom="@dimen/margin"
+            android:text="@string/save"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detailsShoeCancelMaterialButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

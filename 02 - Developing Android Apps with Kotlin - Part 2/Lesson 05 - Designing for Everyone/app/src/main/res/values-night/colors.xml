@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    https://material.io/design/color/the-color-system.html#color-usage-palettes-->
+<!--    https://material.io/tools/color/#!/?view.left=0&view.right=0-->
+<!--    https://developer.android.com/training/material/palette-colors-->
+<!--    https://developer.android.com/reference/android/graphics/Color-->
+
+<resources>
+  <color name="primaryColor">#7e57c2</color>
+  <color name="primaryLightColor">#b085f5</color>
+  <color name="primaryDarkColor">#4d2c91</color>
+  <color name="secondaryColor">#4fc3f7</color>
+  <color name="secondaryLightColor">#8bf6ff</color>
+  <color name="secondaryDarkColor">#0093c4</color>
+  <color name="primaryTextColor">#000000</color>
+  <color name="secondaryTextColor">#ffffff</color>
+</resources>

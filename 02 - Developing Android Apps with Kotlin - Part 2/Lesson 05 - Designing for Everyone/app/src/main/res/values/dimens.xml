@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    https://developer.android.com/guide/topics/resources/providing-resources-->
+<!--    https://developer.android.com/guide/topics/resources/available-resources-->
+<!--    https://developer.android.com/studio/write/add-resources-->
+<!--    https://developer.android.com/guide/topics/resources/more-resources-->
+
+<resources>
+
+    <dimen name="spacing_normal">16dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoe_listings">Shoe Listings</string>
+    <string name="show_details">Shoe Details</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="log_in">Log In</string>
+    <string name="shoe_store_inventory">Shoe Store Inventory</string>
+    <string name="manage_your_shoe_store_inventory_and_details">Manage your shoe store details\nand inventory in one place.</string>
+    <string name="click_next_to_learn_more">Click next to learn more</string>
+    <string name="next">Next</string>
+    <string name="shoe_instructions_text">You may click "+" to go to the shoe details screen.\nIn the shoe details screen you can edit the Shoe Name, Company, Shoe Size, and Description.</string>
+    <string name="click_below_to_begin">Click below to begin</string>
+    <string name="begin">Begin</string>
+    <string name="fab_content_description">Floating action button to go to shoe inventory details screen.</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+</resources>

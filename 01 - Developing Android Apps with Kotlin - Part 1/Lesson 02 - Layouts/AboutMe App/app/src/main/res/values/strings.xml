@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="yellow_star">yellow star</string>
+
+    <string name="bio">Hi, my name is Jason.
+\n\nI love technology.
+\n\nI am a Software Engineer with a demonstrated history of working in the automotive industry.
+\n\nI\'m skilled in Android Development, Embedded Software, and Controls Engineering.
+\n\nI have exposure to Flutter cross platform development.
+\n\nI\'m a strong engineering professional with a Bachelor\'s degree focused in Computer and Electrical Engineering from Michigan Technological University.</string>
+
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
+</resources>
